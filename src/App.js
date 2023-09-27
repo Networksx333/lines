@@ -126,11 +126,13 @@ const App = () => {
         </>
       )}
       {screen !== 0 && (
-        <Button onClick={handleBackButtonClick} className="back-Button">
-          Запомнить новый текст
-        </Button>
+        <div className="footer"><Button onClick={handleBackButtonClick} className="back-Button">
+        Запомнить новый текст
+      </Button>
+      <Button onClick={handleInstructionModalOpen}>Инструкция</Button></div>
+        
       )}
-      <Button onClick={handleInstructionModalOpen}>Инструкция</Button>
+      
       
       
 
@@ -140,8 +142,7 @@ const App = () => {
         className="modal"
       >
         <div className="modal-content">
-          <Typography variant="h6">Инструкция</Typography>
-          <Typography style={{ whiteSpace: "pre-line" }} variant="h4" gutterBottom>
+          <Typography style={{ whiteSpace: "pre-line" }} variant="h7" gutterBottom>
             Приветствуем в приложении Lines!
             Уж так сложилось, что всё в этой жизни нужно автоматизировать. Запоминание тоже.
             Алгоритм следующий: <br/>
@@ -149,7 +150,7 @@ const App = () => {
             2. Нажми на кнопку "Я помню всё" <br/>
             3. Снова прочитай текст, только теперь в твоём распоряжении только первые буквы каждого слова <br/>
             4. Не получилось? Вернись к пункту 2 <br/>
-            5. Поздравляю, теперь можешь текст рассказать 
+            5. Поздравляю, теперь можешь текст рассказать <br/>
           </Typography>
           <Button
             onClick={handleInstructionModalClose}
@@ -163,7 +164,7 @@ const App = () => {
 };
 
 const FullTextScreen = ({ text }) => {
-  return <div className="back"><Typography style={{ whiteSpace: "pre-line" }} variant="h4">{text}</Typography></div>;
+  return <div className="back"><Typography style={{ whiteSpace: "pre-line" }} variant="h6">{text}</Typography></div>;
 };
 
 const AbbreviatedTextScreen = ({ text }) => {
@@ -186,7 +187,7 @@ const AbbreviatedTextScreen = ({ text }) => {
     }
   }
 
-  return <div className="back"><Typography style={{ whiteSpace: "pre-line" }} variant="h4">{abbreviatedText}</Typography></div>;
+  return <div className="back"><Typography style={{ whiteSpace: "pre-line" }} variant="h6">{abbreviatedText}</Typography></div>;
 };
 
 

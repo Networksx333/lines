@@ -1,6 +1,8 @@
 html {
+  /* background: linear-gradient(to bottom, rgba(211, 188, 200, 1), rgba(23, 196, 215, 1)); */
   background-image: url('../public/back.jpg');
   background-size: cover;
+  height: 100vh;
   background-position: center;
   background-repeat: no-repeat;
 }
@@ -28,7 +30,7 @@ html {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100vh;
+  /* height: 100vh; */
   padding: 0 5%;
   overflow: auto;
   background-color: rgba(0, 0, 0, 0.5);
@@ -61,4 +63,12 @@ button {
   background-color: rgba(255, 255, 255, 0.5);
   padding: 5%;
   border-radius: 25px;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
 }
