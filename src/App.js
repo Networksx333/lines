@@ -117,19 +117,21 @@ const App = () => {
       )}
       {screen !== 0 && (
         <>
-          <Button onClick={handleScreenChange}>Я помню всё</Button>
+         
           {screen === 1 ? (
             <FullTextScreen text={text} />
           ) : (
             <AbbreviatedTextScreen text={text} />
-          )}
+          )} 
         </>
       )}
       {screen !== 0 && (
-        <div className="footer"><Button onClick={handleBackButtonClick} className="back-Button">
-        Запомнить новый текст
-      </Button>
-      <Button onClick={handleInstructionModalOpen}>Инструкция</Button></div>
+        
+        <div className="footer">
+      <Button onClick={handleScreenChange}>Я помню всё</Button>
+      <Button onClick={handleBackButtonClick} className="back-Button">Запомнить новый текст</Button>
+      <Button onClick={handleInstructionModalOpen}>Инструкция</Button>
+      </div>
         
       )}
       
